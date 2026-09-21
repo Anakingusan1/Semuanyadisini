@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jull</title>
+  
+  <!-- Font Awesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS External -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Audio Element -->
+<audio id="bg-audio" loop preload="auto">
+  <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+  <!-- Audio Toggle Control -->
+  <button id="audio-toggle" class="audio-btn" aria-label="Toggle Audio">
+    <i class="fa-solid fa-volume-xmark" id="audio-icon"></i>
+  </button>
+
+  <!-- Animated GIF Background & Overlay -->
+  <div class="bg-wrapper">
+    <div class="bg-gif"></div>
+    <div class="bg-overlay"></div>
+  </div>
+
+  <!-- SPLASH SCREEN / ENTER MODAL -->
+  <div id="splash-screen" class="splash-container">
+    <div class="splash-card shiny-element">
+      <div class="splash-logo-wrapper">
+        <img src="https://i.pinimg.com/736x/a5/dd/9f/a5dd9f801adcf079b56a97c73dd5e724.jpg" alt="Logo" class="splash-logo">
+      </div>
+      <h2 class="splash-title">Private Experience</h2>
+      <div class="splash-divider-container">
+        <span class="splash-line"></span>
+        <span class="splash-tap-text">TAP ANYWHERE</span>
+        <span class="splash-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content" class="main-wrapper hidden">
+    <div class="profile-card shiny-card">
+      
+      <!-- Top Avatar & Header -->
+      <div class="header-section">
+        <div class="avatar-wrapper">
+          <img src="https://i.pinimg.com/736x/a5/dd/9f/a5dd9f801adcf079b56a97c73dd5e724.jpg" alt="Avatar" class="avatar-img">
+        </div>
+        <h1 class="profile-name">Jull</h1>
+        <p class="profile-latin-quote">Αἰὲν ἀριστεύειν.</p>
+        
+        <!-- Social Icons Row (Top Header) -->
+        <div class="header-socials">
+          <a href="https://www.tiktok.com/@Jullyessir" target="_blank" class="social-icon-btn" title="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://www.youtube.com/@ytjull1250" target="_blank" class="social-icon-btn" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://discord.com/users/890595523315261441" target="_blank" class="social-icon-btn" title="Discord">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Discord Status Widget -->
+      <div class="discord-rpc-card shiny-element">
+        <div class="rpc-avatar-container">
+          <img src="https://i.pinimg.com/736x/a5/dd/9f/a5dd9f801adcf079b56a97c73dd5e724.jpg" alt="Status Avatar" class="rpc-avatar">
+          <span class="status-indicator"></span>
+        </div>
+        <div class="rpc-info">
+          <div class="rpc-title-row">
+            <span class="rpc-name">Jull</span>
+            <span class="badge-pro">PRO+</span>
+            <span class="crown-icon"><i class="fa-solid fa-crown"></i></span>
+          </div>
+          <div class="rpc-subtitle">Jull</div>
+          <div class="rpc-status-text" id="rotating-quote">Selama masih bernapas, saya tetap berharap.</div>
+        </div>
+      </div>
+
+      <!-- Live Stats Counters -->
+      <div class="stats-bar">
+        <div class="stat-item"><i class="fa-solid fa-eye"></i> <span id="stat-views">1.2M</span></div>
+        <div class="stat-item"><i class="fa-solid fa-user-group"></i> <span id="stat-followers">16.9K</span></div>
+        <div class="stat-item"><i class="fa-solid fa-heart"></i> <span id="stat-likes">696.5K</span></div>
+        <div class="stat-item"><i class="fa-solid fa-cart-shopping"></i> <span id="stat-cart">283 +</span></div>
+        <div class="stat-item"><i class="fa-solid fa-chart-simple"></i> <span id="stat-analytics">1.01K</span></div>
+      </div>
+
+      <!-- Social Button Row Container -->
+      <div class="social-row-grid">
+        <a href="https://github.com/JullXxxx" target="_blank" class="social-box-btn shiny-btn" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://discord.gg/e6TvwcXaQ" target="_blank" class="social-box-btn shiny-btn" title="Discord">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+        <a href="https://www.instagram.com/julltzy9" target="_blank" class="social-box-btn shiny-btn" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@ytjull1250" target="_blank" class="social-box-btn shiny-btn" title="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.tiktok.com/@Jullyessir" target="_blank" class="social-box-btn shiny-btn" title="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+
+      <!-- Main Action Links -->
+      <div class="action-links-container">
+        
+        <!-- Discord Community Link -->
+        <a href="https://discord.gg/e6TvwcXaQ" target="_blank" class="action-link-card shiny-btn">
+          <div class="link-icon-box discord-bg">
+            <i class="fa-brands fa-discord"></i>
+          </div>
+          <div class="link-text-content">
+            <div class="link-title">Discord Community</div>
+            <div class="link-desc">Join Jull Server Discussion</div>
+          </div>
+          <i class="fa-solid fa-chevron-right link-arrow"></i>
+        </a>
+
+        <!-- Buy Modpack Link -->
+        <a href="https://discord.com/users/890595523315261441" target="_blank" class="action-link-card shiny-btn purple-highlight">
+          <div class="link-icon-box package-bg">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <div class="link-text-content">
+            <div class="link-title">Open Pembuatan Web Dll</div>
+            <div class="link-desc">Custom web </div>
+          </div>
+          <i class="fa-solid fa-chevron-right link-arrow"></i>
+        </a>
+
+        <!-- Sociabuzz Link -->
+        <a href="https://sociabuzz.com/jull192" target="_blank" class="action-link-card shiny-btn">
+          <div class="link-icon-box sociabuzz-bg">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <div class="link-text-content">
+            <div class="link-title">Sociabuzz MediaShare</div>
+            <div class="link-desc">Support & Donation Link</div>
+          </div>
+          <i class="fa-solid fa-chevron-right link-arrow"></i>
+        </a>
+
+       
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer-section">
+        <p>© 2026 Jull</p>
+        <span>Built with ❤️ | Thank you, everyone!</span>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- JavaScript External -->
+  <script src="script.js"></script>
+</body>
+</html>
